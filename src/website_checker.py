@@ -33,3 +33,6 @@ def website_check():
         
                 time.sleep(15)
                 continue
+                    
+        except Exception:
+            error = Exception
