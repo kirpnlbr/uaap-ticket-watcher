@@ -13,9 +13,9 @@ bot = discord.Client()
 @bot.event
 async def on_message(message):
     if change_value is True:
-        await message.channel.send('Looks like an event has been added or removed from SM Tickets. Go check it out quick 👀 https://smtickets.com/events/category/sports')
+        await message.channel.send('Looks like an event has been added or removed from SM Tickets. Tignan mo na dali!! https://smtickets.com/events/category/sports')
 
     elif script_error is True:
-        await message.channel.send('An error has occurred woops. Fix me pls')
+        await message.channel.send('404. Fix me pls')
 
 bot.run(DISCORD_TOKEN)
