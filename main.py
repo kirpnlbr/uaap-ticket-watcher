@@ -1,7 +1,10 @@
-# Allows access to Discord's API
 import discord
+import os
 
-# Gets client object from discord.py
+from dotenv import load_dotenv
+load_dotenv()
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+
 bot = discord.Client()
 
 @bot.event
@@ -14,4 +17,4 @@ async def on_ready():
 
     print("UAAP Ticket Watcher is in " + str(guild_count) + " guilds.")
 
-bot.run("OTc0NTgzNTQxODU1ODQyMzA0.GmkR0L.fzd-QiNVVt9a2QWjZpH4yVsQDY6FQaMWwgVo38")
+bot.run(DISCORD_TOKEN)
