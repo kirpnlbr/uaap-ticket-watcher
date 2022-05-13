@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
-from website_checker import change_value
-from website_checker import script_error
+from scripts.website_checker import change_value
+from scripts.website_checker import script_error
 
 bot = discord.Client()
 
