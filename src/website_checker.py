@@ -8,7 +8,7 @@ url = Request('https://smtickets.com/events/category/sports',
 response = urlopen(url).read()
  
 currentHash = hashlib.sha224(response).hexdigest()
-print("running")
+print("Checking for changes... Go do something else for awhile lol")
 time.sleep(10)
 while True:
     try:
@@ -16,7 +16,7 @@ while True:
         
         currentHash = hashlib.sha224(response).hexdigest()
         
-        time.sleep(30)
+        time.sleep(15)
         
         response = urlopen(url).read()
         
@@ -26,14 +26,14 @@ while True:
             continue
  
         else:
-            print("something changed")
+            print("Looks like an event has been added or removed from SM Tickets. Go check it out quick 👀")
  
             response = urlopen(url).read()
  
             currentHash = hashlib.sha224(response).hexdigest()
  
-            time.sleep(30)
+            time.sleep(15)
             continue
             
     except Exception as e:
-        print("error")
+        print("Woops! An error has occurred 😅")
